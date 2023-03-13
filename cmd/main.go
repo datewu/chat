@@ -4,7 +4,7 @@ import (
 	"context"
 	"flag"
 
-	"github.com/datewu/abc/cmd/api" // change pkg path
+	"github.com/datewu/chat/cmd/api" // change pkg path
 	"github.com/datewu/gtea"
 	"github.com/datewu/gtea/jsonlog"
 )
@@ -14,12 +14,14 @@ var (
 	buildTime string
 )
 var (
-	port int
-	env  string
+	port  int
+	gport int
+	env   string
 )
 
 func main() {
 	flag.IntVar(&port, "port", 8080, "API server port")
+	flag.IntVar(&gport, "gport", 32186, "grpc server port")
 	flag.StringVar(&env, "env", "development", "Environment (development|staging|production)")
 	flag.Parse()
 

@@ -1,4 +1,4 @@
-module github.com/datewu/abc
+module github.com/datewu/chat
 
 go 1.20
 
